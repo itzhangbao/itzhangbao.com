@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>批量删除 Github 仓库 | zhmbo</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/img/favicon.ico">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/MouseClickEffect.js"></script>
+    <script src="/js/FooterFish.js"></script>
+    <meta name="description" content="zhmbo的技术博客,专注iOS技术分享,iOS,OC,Objective-C,Swift,SwiftUI,Apple,上架,Flutter,OpenGL,Xcode,Github,RxSwift,算法,架构,面试,zhmbo,zb,ZB,zhmbo,jumbo">
+    <meta name="keywords" content="zhmbo,zhmbo,zhangbao,zhmbo的技术博客,个人博客,博客搭建,专注iOS技术分享,iOS,iOS进阶,iOS高级,OC,Objective-C,Swift,SwiftUI,Apple,上架,Flutter,OpenGL,Xcode,RxSwift,UIButton,UITableView,网络请求,Github,GithubActions,算法,架构,面试,zb,ZB,zhmbo,jumbo">
+    <meta name="baidu-site-verification" content="code-l7ZsTFnxp5">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/assets/css/0.styles.e2acd18e.css" as="style"><link rel="preload" href="/assets/js/app.f3ce349e.js" as="script"><link rel="preload" href="/assets/js/2.0867e359.js" as="script"><link rel="preload" href="/assets/js/3.c9b25fa3.js" as="script"><link rel="preload" href="/assets/js/68.3761fab6.js" as="script"><link rel="prefetch" href="/assets/js/10.94901232.js"><link rel="prefetch" href="/assets/js/100.e05ccf5a.js"><link rel="prefetch" href="/assets/js/101.383fb85e.js"><link rel="prefetch" href="/assets/js/102.ecf38cb8.js"><link rel="prefetch" href="/assets/js/103.af6d6eab.js"><link rel="prefetch" href="/assets/js/104.19d316bd.js"><link rel="prefetch" href="/assets/js/105.075e6e56.js"><link rel="prefetch" href="/assets/js/106.f18703fe.js"><link rel="prefetch" href="/assets/js/107.e078a288.js"><link rel="prefetch" href="/assets/js/108.ab61aa9f.js"><link rel="prefetch" href="/assets/js/11.8ef9fb05.js"><link rel="prefetch" href="/assets/js/12.c7162e8b.js"><link rel="prefetch" href="/assets/js/13.6ac6a2dc.js"><link rel="prefetch" href="/assets/js/14.94d14cf9.js"><link rel="prefetch" href="/assets/js/15.2507e223.js"><link rel="prefetch" href="/assets/js/16.f49fafef.js"><link rel="prefetch" href="/assets/js/17.a3b17d53.js"><link rel="prefetch" href="/assets/js/18.5ceb2726.js"><link rel="prefetch" href="/assets/js/19.62d23c90.js"><link rel="prefetch" href="/assets/js/20.248fde0f.js"><link rel="prefetch" href="/assets/js/21.004ba7eb.js"><link rel="prefetch" href="/assets/js/22.de89d203.js"><link rel="prefetch" href="/assets/js/23.e6fc9e17.js"><link rel="prefetch" href="/assets/js/24.405bd940.js"><link rel="prefetch" href="/assets/js/25.54c1e1ac.js"><link rel="prefetch" href="/assets/js/26.1c1605f7.js"><link rel="prefetch" href="/assets/js/27.89f9fd24.js"><link rel="prefetch" href="/assets/js/28.3cd8039e.js"><link rel="prefetch" href="/assets/js/29.22f63130.js"><link rel="prefetch" href="/assets/js/30.7234374a.js"><link rel="prefetch" href="/assets/js/31.a25c23f0.js"><link rel="prefetch" href="/assets/js/32.085538f5.js"><link rel="prefetch" href="/assets/js/33.1209014f.js"><link rel="prefetch" href="/assets/js/34.7bf8c081.js"><link rel="prefetch" href="/assets/js/35.f08fded4.js"><link rel="prefetch" href="/assets/js/36.8fa383c2.js"><link rel="prefetch" href="/assets/js/37.5e4545c8.js"><link rel="prefetch" href="/assets/js/38.40965176.js"><link rel="prefetch" href="/assets/js/39.06f43301.js"><link rel="prefetch" href="/assets/js/4.2e7362c6.js"><link rel="prefetch" href="/assets/js/40.e1f1db9e.js"><link rel="prefetch" href="/assets/js/41.df1c45f6.js"><link rel="prefetch" href="/assets/js/42.6d837ab7.js"><link rel="prefetch" href="/assets/js/43.739bbe49.js"><link rel="prefetch" href="/assets/js/44.590ed6a2.js"><link rel="prefetch" href="/assets/js/45.5ef4c347.js"><link rel="prefetch" href="/assets/js/46.32482d56.js"><link rel="prefetch" href="/assets/js/47.1581ad20.js"><link rel="prefetch" href="/assets/js/48.6fac50af.js"><link rel="prefetch" href="/assets/js/49.7291756a.js"><link rel="prefetch" href="/assets/js/5.0d157b32.js"><link rel="prefetch" href="/assets/js/50.f7f20786.js"><link rel="prefetch" href="/assets/js/51.f0d79269.js"><link rel="prefetch" href="/assets/js/52.01df9c2f.js"><link rel="prefetch" href="/assets/js/53.7bc2fec5.js"><link rel="prefetch" href="/assets/js/54.3eafbf22.js"><link rel="prefetch" href="/assets/js/55.3b3fe2e4.js"><link rel="prefetch" href="/assets/js/56.31979be2.js"><link rel="prefetch" href="/assets/js/57.a9806594.js"><link rel="prefetch" href="/assets/js/58.1bdb43d0.js"><link rel="prefetch" href="/assets/js/59.3b1f3c03.js"><link rel="prefetch" href="/assets/js/6.15c39ee9.js"><link rel="prefetch" href="/assets/js/60.860ea720.js"><link rel="prefetch" href="/assets/js/61.98198e51.js"><link rel="prefetch" href="/assets/js/62.6e1cf519.js"><link rel="prefetch" href="/assets/js/63.f1b5ae69.js"><link rel="prefetch" href="/assets/js/64.fcc4ccc7.js"><link rel="prefetch" href="/assets/js/65.9d81e3f0.js"><link rel="prefetch" href="/assets/js/66.90e414a3.js"><link rel="prefetch" href="/assets/js/67.3d8abe0f.js"><link rel="prefetch" href="/assets/js/69.403caeca.js"><link rel="prefetch" href="/assets/js/7.068982a1.js"><link rel="prefetch" href="/assets/js/70.6438db78.js"><link rel="prefetch" href="/assets/js/71.32940492.js"><link rel="prefetch" href="/assets/js/72.6d4d2100.js"><link rel="prefetch" href="/assets/js/73.ed1165d0.js"><link rel="prefetch" href="/assets/js/74.5135a5bd.js"><link rel="prefetch" href="/assets/js/75.522838d2.js"><link rel="prefetch" href="/assets/js/76.721bd742.js"><link rel="prefetch" href="/assets/js/77.5e3c24bf.js"><link rel="prefetch" href="/assets/js/78.729debe4.js"><link rel="prefetch" href="/assets/js/79.0fb3f1cb.js"><link rel="prefetch" href="/assets/js/8.42a754ce.js"><link rel="prefetch" href="/assets/js/80.6af781b0.js"><link rel="prefetch" href="/assets/js/81.98e86006.js"><link rel="prefetch" href="/assets/js/82.e0b4b5db.js"><link rel="prefetch" href="/assets/js/83.873b87c8.js"><link rel="prefetch" href="/assets/js/84.2efd4c2e.js"><link rel="prefetch" href="/assets/js/85.4aa65ccc.js"><link rel="prefetch" href="/assets/js/86.1c7a94b2.js"><link rel="prefetch" href="/assets/js/87.049aa67c.js"><link rel="prefetch" href="/assets/js/88.51ef82af.js"><link rel="prefetch" href="/assets/js/89.44d24f91.js"><link rel="prefetch" href="/assets/js/9.2e394472.js"><link rel="prefetch" href="/assets/js/90.5789d06b.js"><link rel="prefetch" href="/assets/js/91.6554158f.js"><link rel="prefetch" href="/assets/js/92.1054112d.js"><link rel="prefetch" href="/assets/js/93.8b37418f.js"><link rel="prefetch" href="/assets/js/94.d8ffeb0c.js"><link rel="prefetch" href="/assets/js/95.774f8208.js"><link rel="prefetch" href="/assets/js/96.ba759fc2.js"><link rel="prefetch" href="/assets/js/97.d505acbb.js"><link rel="prefetch" href="/assets/js/98.8da1accc.js"><link rel="prefetch" href="/assets/js/99.bc4d1fbd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e2acd18e.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div class="width-limit"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link"><img src="https://cdn.jsdelivr.net/gh/zhmbo/static@master/img/202407311741918.png" alt="zhmbo" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont jumbo-nav-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><a href="/ios/" class="link-title"><i class="iconfont jumbo-apple"></i>
+      iOS
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-apple"></i>
+      iOS
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>iOS开发精髓</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/3f0170/" class="nav-link"><i class="iconfont undefined"></i>
+  介绍
+</a></li><li class="dropdown-subitem"><a href="/pages/7354af/" class="nav-link"><i class="iconfont undefined"></i>
+  从入门
+</a></li><li class="dropdown-subitem"><a href="/pages/1b29d1/" class="nav-link"><i class="iconfont undefined"></i>
+  到放弃
+</a></li></ul></li><li class="dropdown-item"><h4>iOS充电宝</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/5cb5f0/" class="nav-link"><i class="iconfont undefined"></i>
+  SwiftUI
+</a></li><li class="dropdown-subitem"><a href="/pages/9e761f/" class="nav-link"><i class="iconfont undefined"></i>
+  iOS14
+</a></li><li class="dropdown-subitem"><a href="/pages/5e2170/" class="nav-link"><i class="iconfont undefined"></i>
+  Xcode12
+</a></li><li class="dropdown-subitem"><a href="/pages/554b82/" class="nav-link"><i class="iconfont undefined"></i>
+  iOS周边
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Swift" class="dropdown-title"><a href="/swift/" class="link-title"><i class="iconfont jumbo-swift"></i>
+      Swift
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-swift"></i>
+      Swift
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/04ed05/" class="nav-link"><i class="iconfont undefined"></i>
+  概览
+</a></li><li class="dropdown-item"><!----> <a href="/pages/cf2b9a/" class="nav-link"><i class="iconfont undefined"></i>
+  欢迎来到Swift
+</a></li><li class="dropdown-item"><!----> <a href="/pages/9e2f81/" class="nav-link"><i class="iconfont undefined"></i>
+  Swift语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/581348/" class="nav-link"><i class="iconfont undefined"></i>
+  语言参考
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/technology/" class="link-title"><i class="iconfont jumbo-jishu"></i>
+      技术
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-jishu"></i>
+      技术
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/4f2c93/" class="nav-link"><i class="iconfont undefined"></i>
+  博客
+</a></li><li class="dropdown-item"><!----> <a href="/pages/6cbba7/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/pages/d9a627/" class="nav-link"><i class="iconfont undefined"></i>
+  CocosCreator
+</a></li><li class="dropdown-item"><!----> <a href="/pages/9af5e1/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/46944a/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/pages/4b617e/" class="nav-link"><i class="iconfont undefined"></i>
+  Android
+</a></li><li class="dropdown-item"><!----> <a href="/pages/6ee1a4/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li></ul></div></div><div class="nav-item"><a href="/leaveword/" class="nav-link"><i class="iconfont jumbo-liuyan"></i>
+  留言
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title"><i class="iconfont jumbo-suoyin"></i>
+      索引
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-suoyin"></i>
+      索引
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link"><i class="iconfont undefined"></i>
+  分类
+</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link"><i class="iconfont undefined"></i>
+  标签
+</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link"><i class="iconfont undefined"></i>
+  归档
+</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link"><i class="iconfont undefined"></i>
+  友链
+</a></li><li class="dropdown-item"><!----> <a href="/navigation/" class="nav-link"><i class="iconfont undefined"></i>
+  导航
+</a></li><li class="dropdown-item"><!----> <a href="/findme/" class="nav-link"><i class="iconfont undefined"></i>
+  寻Me
+</a></li></ul></div></div> <!----></nav></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/zhmbo/static@master/img/20200919111632.png"> <div class="blogger-info"><h3>@jumbo</h3> <span>an ios developer</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont jumbo-nav-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><a href="/ios/" class="link-title"><i class="iconfont jumbo-apple"></i>
+      iOS
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-apple"></i>
+      iOS
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>iOS开发精髓</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/3f0170/" class="nav-link"><i class="iconfont undefined"></i>
+  介绍
+</a></li><li class="dropdown-subitem"><a href="/pages/7354af/" class="nav-link"><i class="iconfont undefined"></i>
+  从入门
+</a></li><li class="dropdown-subitem"><a href="/pages/1b29d1/" class="nav-link"><i class="iconfont undefined"></i>
+  到放弃
+</a></li></ul></li><li class="dropdown-item"><h4>iOS充电宝</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/5cb5f0/" class="nav-link"><i class="iconfont undefined"></i>
+  SwiftUI
+</a></li><li class="dropdown-subitem"><a href="/pages/9e761f/" class="nav-link"><i class="iconfont undefined"></i>
+  iOS14
+</a></li><li class="dropdown-subitem"><a href="/pages/5e2170/" class="nav-link"><i class="iconfont undefined"></i>
+  Xcode12
+</a></li><li class="dropdown-subitem"><a href="/pages/554b82/" class="nav-link"><i class="iconfont undefined"></i>
+  iOS周边
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Swift" class="dropdown-title"><a href="/swift/" class="link-title"><i class="iconfont jumbo-swift"></i>
+      Swift
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-swift"></i>
+      Swift
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/04ed05/" class="nav-link"><i class="iconfont undefined"></i>
+  概览
+</a></li><li class="dropdown-item"><!----> <a href="/pages/cf2b9a/" class="nav-link"><i class="iconfont undefined"></i>
+  欢迎来到Swift
+</a></li><li class="dropdown-item"><!----> <a href="/pages/9e2f81/" class="nav-link"><i class="iconfont undefined"></i>
+  Swift语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/581348/" class="nav-link"><i class="iconfont undefined"></i>
+  语言参考
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/technology/" class="link-title"><i class="iconfont jumbo-jishu"></i>
+      技术
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-jishu"></i>
+      技术
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/4f2c93/" class="nav-link"><i class="iconfont undefined"></i>
+  博客
+</a></li><li class="dropdown-item"><!----> <a href="/pages/6cbba7/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/pages/d9a627/" class="nav-link"><i class="iconfont undefined"></i>
+  CocosCreator
+</a></li><li class="dropdown-item"><!----> <a href="/pages/9af5e1/" class="nav-link"><i class="iconfont undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/46944a/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/pages/4b617e/" class="nav-link"><i class="iconfont undefined"></i>
+  Android
+</a></li><li class="dropdown-item"><!----> <a href="/pages/6ee1a4/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li></ul></div></div><div class="nav-item"><a href="/leaveword/" class="nav-link"><i class="iconfont jumbo-liuyan"></i>
+  留言
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title"><i class="iconfont jumbo-suoyin"></i>
+      索引
+    </a> <span class="title" style="display:none;"><i class="iconfont jumbo-suoyin"></i>
+      索引
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link"><i class="iconfont undefined"></i>
+  分类
+</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link"><i class="iconfont undefined"></i>
+  标签
+</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link"><i class="iconfont undefined"></i>
+  归档
+</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link"><i class="iconfont undefined"></i>
+  友链
+</a></li><li class="dropdown-item"><!----> <a href="/navigation/" class="nav-link"><i class="iconfont undefined"></i>
+  导航
+</a></li><li class="dropdown-item"><!----> <a href="/findme/" class="nav-link"><i class="iconfont undefined"></i>
+  寻Me
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>博客</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Github</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/6cbba7/" class="sidebar-link">github-profile</a></li><li><a href="/pages/2f79ca/" aria-current="page" class="active sidebar-link">批量删除仓库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/2f79ca/#应用创景" class="sidebar-link">应用创景</a></li><li class="sidebar-sub-header"><a href="/pages/2f79ca/#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/pages/2f79ca/#使用" class="sidebar-link">使用</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CocosCreator</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Android</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"> <div class="theme-vdoing-wrapper bg-style-1"><div class="articleInfo-wrap" data-v-7e90c5a4><div class="articleInfo" data-v-7e90c5a4><ul class="breadcrumbs" data-v-7e90c5a4><li data-v-7e90c5a4><a href="/" title="首页" class="iconfont jumbo-home router-link-active" data-v-7e90c5a4></a></li> <li data-v-7e90c5a4><a href="/categories/?category=%E6%8A%80%E6%9C%AF" title="分类" data-v-7e90c5a4>技术</a></li> <li data-v-7e90c5a4><a href="/categories/?category=Github" title="分类" data-v-7e90c5a4>Github</a></li></ul> <div class="info" data-v-7e90c5a4><div title="作者" class="author iconfont jumbo-author" data-v-7e90c5a4><a href="https://github.com/zhmbo" target="_blank" title="作者" class="beLink" data-v-7e90c5a4>zhmbo</a></div> <div title="创建时间" class="date iconfont jumbo-time" data-v-7e90c5a4><a href="javascript:;" data-v-7e90c5a4>2020-10-30</a></div> <div title="统计" class="date iconfont jumbo-eye" data-v-7e90c5a4><span id="/pages/2f79ca/" data-flag-title="批量删除 Github 仓库" class="leancloud-visitors" data-v-7e90c5a4><a class="leancloud-visitors-count" style="font-size:.7rem;font-weight:normal;color:#999;"></a></span></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">
+          批量删除 Github 仓库
+        </h1> <div class="theme-vdoing-content content__default"><h2 id="应用创景"><a href="#应用创景" class="header-anchor">#</a> 应用创景</h2> <p>无意间创建的 demo 仓库太多<br>
+fork 了一堆从未二次打开的仓库<br>
+迁移仓库到其他地方管理</p> <p>。。。</p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">git</span> clone git@github.com:zhmbo/remove-repos.git
+<span class="token builtin class-name">cd</span> remove-repos
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <ol><li><p>创建 token</p> <p>1). 创建 token 位置： github.com -&gt; 点击头像 -&gt; Settings -&gt; Developer settings -&gt; Personal access tokens <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">点击创建 token<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>2). 点击 Generate new token，并输入密码</p> <p>3). Note 处输入标记这个 token 是做什么的名字，比如：DELETE_TOKEN</p> <p>4). 往下滑动找到 <code>delete_repo</code> 勾选</p> <p>5). Generate token 创建完成并复制。</p></li> <li><p>编辑 remove-github-repos.sh</p> <p>将 DELETE_KOKEN 和 GithubName 都替换为自己的参数</p></li> <li><p>将要删除的仓库名称添加到 repos.txt 文件中</p> <p>repos.txt：</p> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>repName1
+repName2
+...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>选名技巧：仓库名称左上空白处点击三下选中自带换行（❀🐓）</p></li> <li><p>执行</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>./remove-github-repos.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol></div></div> <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2024/07/30, 18:07:00</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/6cbba7/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">github-profile</div></a> <a href="/pages/d9a627/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">CCAlert弹窗插件</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/6cbba7/" class="prev">github-profile</a></span> <span class="next"><a href="/pages/d9a627/">CCAlert弹窗插件</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/742912/"><div>Homebrew+RVM+Ruby+CocoaPods</div></a> <span>11-23</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/81af2e/"><div>iOS13生命周期</div></a> <span>11-14</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/258164/"><div>《Swift编程语言》- 语法总结</div></a> <span>11-11</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div> <div class="comments-wrapper"><!----></div> </main></div> <!----> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">跟随系统</li><li class="iconfont icon-rijianmoshi">浅色模式</li><li class="iconfont icon-yejianmoshi">深色模式</li><li class="iconfont icon-yuedu">阅读模式</li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;filter:grayscale(100%);"></div> <!----> <div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f3ce349e.js" defer></script><script src="/assets/js/2.0867e359.js" defer></script><script src="/assets/js/3.c9b25fa3.js" defer></script><script src="/assets/js/68.3761fab6.js" defer></script>
+  </body>
+</html>

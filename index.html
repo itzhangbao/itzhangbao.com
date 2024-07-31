@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>开发工具箱</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I`m zhmbo a developer from shenzhen.">
+    <meta name="author" content="zhmbo">
+    <meta name="keywords" content="zhmbo,zhmbo,zhmbo的技术博客,个人博客,博客搭建,专注iOS技术分享,iOS,iOS进阶,iOS高级,OC,Objective-C,Swift,SwiftUI,Apple,上架,Flutter,OpenGL,Xcode,RxSwift,UIButton,UITableView,网络请求,Github,GithubActions,算法,架构,面试,zhmbo,zb,ZB,zhmbo,zhmbo">
+    <meta property="og:url" content="https://zhmbo.cn/">
+    <meta property="og:image" content="https://zhmbo.cn/includes/images/opengraph.png">
+    <link rel="icon" type="image/png" href="includes/images/favicon.png">
+    <link rel="stylesheet" href="includes/stylesheets/zhmbo.lite.css?v=27">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js"></script>
+    <script src="includes/javascripts/zhmbo.lite.js?v=27"></script>
+    <script src="https://code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <canvas id="stars"></canvas>
+      <canvas id="zhmbo"></canvas>
+      <div class="container">
+        <div class="template color-yellow" data-template="home">
+          <main>
+            <h1><span>Hi, I'm 
+                <mark>zhmbo</mark></span><span>a Developer🚀 from 深圳.</span></h1>
+            <div class="p"><a class="link small alt" href="mailto:hi@zhmbo.cn" title="send mail to zhmbo">hi@zhmbo.cn</a><span>(+86) 18*-****-****</span></div>
+            <div class="links"><a class="link router color-yellow" href="#blog" title="zhmboのBlog"> <img src="includes/images/ZB-logo.png" title="zhmbo identity" alt="zhmbo identity">
+                <p>zhmboのBlog</p></a><a class="link router color-green" href="#secret" title="Tell me a secret">Tell me a secret</a><a class="link router color-red" href="#aboutme" title="About Me" target="_blank">About Me</a></div>
+          </main>
+          <footer> 
+            <div class="links"><a class="link small alt" href="https://cnblogs.com/itzhangbao" title="博客园 (@zhmbo)" target="_blank">博客园</a><a class="link small alt" href="https://blog.csdn.net/zhangbao_csdn" title="CSDN (@zhmbo)" target="_blank">CSDN</a><a class="link small alt" href="https://www.jianshu.com/u/dad8a468997b" title="简书 (@zhmbo)" target="_blank">简书</a><a class="link small alt" href="https://juejin.im/user/1591748568823677" title="掘金 (@zhmbo)" target="_blank">掘金</a><a class="link small alt" href="https://www.zhihu.com/people/itzhangbao" title="知乎 (@zhmbo)" target="_blank">知乎</a><a class="link small alt" href="https://www.yuque.com/itzhangbao" title="语雀 (@zhmbo)" target="_blank">语雀</a></div>
+            <div class="links"><a class="link small alt" href="https://github.com/itzhangbao" title="Github (@zhmbo)" target="_blank">Github</a><a class="link small alt" href="http://facebook.com/itzhangbao" title="Facebook (@zhmbo)" target="_blank">Facebook</a><a class="link small alt" href="http://twitter.com/itzhangbao" title="Twitter (@zhmbo)" target="_blank">Twitter</a><a class="link small alt" href="http://codepen.io/itzhangbao" title="Codepen (@zhmbo)" target="_blank">Codepen</a><a class="link small alt" href="https://medium.com/@itzhangbao" title="Medium (@zhmbo)" target="_blank">Medium</a>
+              <p class="span small">The site`s been running for 
+                <running_time>520d.0h.0m.0s</running_time> 
+              </p>
+              <p class="span small">Last update on 
+                <update_time>2020.01.01</update_time>
+              </p>
+            </div>
+          </footer>
+        </div>
+        <div class="template color-green" data-template="secret">
+          <main>
+            <div class="h1"><span>Tell me all of your</span><span>
+                <mark>secrets</mark> and be honest..</span></div>
+            <div class="form">
+                  <div class="field">
+                    <textarea name="secret" placeholder="I have a crush on you.."></textarea>
+                    <div class="effect">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div><a class="link submit" href="#" title="Submit" data-form="secret">Submit</a>
+              <div class="small">
+                <div class="status current"><span>If you’re telling me that you killed your brother, I’ll be the one</span><span>who reports you to the police. Okay? Okay? Okay.</span></div>
+                <div class="status" data-status="waiting"><span>Please wait a minute..</span><span>I’m trying to connect to the server.</span></div>
+                <div class="status" data-status="success"><span>I got it! Whatever you told me..</span><span>It will never see the light of day again.</span></div>
+                <div class="status" data-status="error"><span>Something went wrong..</span><span>Please try again later.</span></div>
+              </div>
+            </div>
+            <div class="div"></div>
+          </main>
+          <footer>
+            <div class="links"><a class="link router" href="#" title="Back to home">Back to home</a></div>
+          </footer>
+        </div>
+        <div class="template color-yellow" data-template="bucket">
+          <main>
+            <div class="h1"><span></span><span>Things to do before 
+                <mark>2020</mark></span></div>
+            <div class="small"><span>What’s up next?</span></div>
+            <div class="p"><span>创建自己的网络标签</span></div>
+            <div class="links"><a class="link router" href="#bucket/all" title="View all the bucket list">View all the bucket list</a></div>
+          </main>
+          <footer>
+            <div class="links"><a class="link router small alt" href="#secret" title="Tell me a secret">Tell me a secret</a><a class="link router small alt" href="#" title="Back to home">Back to home</a></div>
+          </footer>
+        </div>
+        <div class="template color-yellow" data-template="bucketAll">
+          <main>
+            <div class="h1"><span></span><span>
+                <mark>bucket list</mark></span></div>
+            <div class="small"><span>Please don’t tell this to anyone.. This list got stolen</span><span>from an idiot I knew. Any problems?</span></div>
+            <ul class="list blocks">
+                  <li class="pending"><span>01.</span><span>Find the one and only girl I’ll spend my entire life with</span></li>
+                  <li class="archived"><a href="http://crush.yahiarefaiea.com" title="Have the courage to tell the girl I like that I like her" target="_blank"><span>May 9, 2020.</span><span>Have the courage to tell the girl I like that I like her</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="pending"><span>03.</span><span>Ditch my wedding, and travel somewhere instead</span></li>
+                  <li class="pending"><span>04.</span><span>Visit all 14 Syrian governorates</span></li>
+                  <li class="pending"><span>05.</span><span>Record a documentary about some part of my life</span></li>
+                  <li class="archived"><a href="https://twitter.com/YahiaRefaiea/status/1061944244519297030" title="Get my work nominated for Website Of The Day" target="_blank"><span>Nov 12, 2018.</span><span>Get my work nominated for Website Of The Day</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="next"><span>Up Next.</span><span>创建自己的网络标签</span></li>
+                  <li class="pending"><span>08.</span><span>Own my first Website Of The Month</span></li>
+                  <li class="pending"><span>09.</span><span>Own my first Website Of The Year</span></li>
+                  <li class="pending"><span>10.</span><span>Be Designer Of The Year</span></li>
+                  <li class="pending"><span>11.</span><span>Teach 20 homeless how to code and change their lives</span></li>
+                  <li class="pending"><span>12.</span><span>Visit the Hogwarts School of Witchcraft and Wizardry</span></li>
+                  <li class="archived"><a href="https://www.facebook.com/events/125212944878228/permalink/125215144878008/" title="Watch Harry Potter’s movies all at once without sleeping" target="_blank"><span>Sep 20, 2017.</span><span>Watch Harry Potter’s movies all at once without sleeping</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="archived"><a href="https://www.facebook.com/YahiaRefaiea/posts/1090008704488683" title="Have a pet" target="_blank"><span>Sep 21, 2018.</span><span>Have a pet</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="pending"><span>15.</span><span>Have a monkey</span></li>
+                  <li class="pending"><span>16.</span><span>Have a baby lion</span></li>
+                  <li class="pending"><span>17.</span><span>Play with a baby panda</span></li>
+                  <li class="archived"><a href="https://www.facebook.com/YahiaRefaiea/media_set?set=a.542222899267269&amp;type=3" title="30 day doodle to illustrator" target="_blank"><span>Mar 23, 2016.</span><span>30 day doodle to illustrator</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="archived"><a href="https://www.facebook.com/YahiaRefaiea/media_set?set=a.867667380056151&amp;type=3" title="Do Inktober drawing challenge" target="_blank"><span>Oct 31, 2017.</span><span>Do Inktober drawing challenge</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="pending"><span>20.</span><span>Read the license for all the softwares I usually use</span></li>
+                  <li class="pending"><span>21.</span><span>Devote a one day to help random people from the street</span></li>
+                  <li class="pending"><span>22.</span><span>Publish a book</span></li>
+                  <li class="pending"><span>23.</span><span>Write a one paper song</span></li>
+                  <li class="pending"><span>24.</span><span>Watch Game of Thrones</span></li>
+                  <li class="pending"><span>25.</span><span>Learn how to play an instrument</span></li>
+                  <li class="pending"><span>26.</span><span>Play an instrument in the street</span></li>
+                  <li class="pending"><span>27.</span><span>Ride a four wheelers in the desert</span></li>
+                  <li class="pending"><span>28.</span><span>Catch-up 50 fish all by myself</span></li>
+                  <li class="pending"><span>29.</span><span>Work in a zoo as a zoo keeper</span></li>
+                  <li class="pending"><span>30.</span><span>Live in a treehouse for 6 months</span></li>
+                  <li class="pending"><span>31.</span><span>Rent a boat for a one day with my future wife all alone in a river</span></li>
+                  <li class="pending"><span>32.</span><span>Visit Disneyland with my future daughter</span></li>
+                  <li class="pending"><span>33.</span><span>Visit Switzerland</span></li>
+                  <li class="pending"><span>34.</span><span>Visit La Villa Sola Cabiati in Italy</span></li>
+                  <li class="pending"><span>35.</span><span>Master chess</span></li>
+                  <li class="pending"><span>36.</span><span>Monthly donate to an animal shelter</span></li>
+                  <li class="archived"><a href="https://www.facebook.com/YahiaRefaiea/posts/971219879700900" title="Win Startup Weekend 1st place" target="_blank"><span>Apr 22, 2018.</span><span>Win Startup Weekend 1st place</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="pending"><span>38.</span><span>Face a fear</span></li>
+                  <li class="pending"><span>39.</span><span>Go to a major festival in China</span></li>
+                  <li class="pending"><span>40.</span><span>Go on a hike</span></li>
+                  <li class="pending"><span>41.</span><span>Skydiving</span></li>
+                  <li class="pending"><span>42.</span><span>Bungee jumping</span></li>
+                  <li class="pending"><span>43.</span><span>Cave diving</span></li>
+                  <li class="pending"><span>44.</span><span>Spend a night on the beach</span></li>
+                  <li class="pending"><span>45.</span><span>Send a message in a bottle over the sea</span></li>
+                  <li class="pending"><span>46.</span><span>Eat a pizza in Italy</span></li>
+                  <li class="pending"><span>47.</span><span>Take a walk through Italy</span></li>
+                  <li class="pending"><span>48.</span><span>Speak Italian fluently</span></li>
+                  <li class="pending"><span>49.</span><span>Speak 4 International languages fluently</span></li>
+                  <li class="pending"><span>50.</span><span>Hold a real gun</span></li>
+                  <li class="pending"><span>51.</span><span>Have a paintball fight with friends</span></li>
+                  <li class="pending"><span>52.</span><span>Start and achieve a 365 Day Happiness Challenge</span></li>
+                  <li class="pending"><span>53.</span><span>Travel the world with someone I love</span></li>
+                  <li class="pending"><span>54.</span><span>Ride a jetski</span></li>
+                  <li class="pending"><span>55.</span><span>Have a vacation in Cordova</span></li>
+                  <li class="pending"><span>56.</span><span>Visit the Walk of Fame</span></li>
+                  <li class="pending"><span>57.</span><span>Visit the Breaking Room!</span></li>
+                  <li class="pending"><span>58.</span><span>Visit all 7 continents in one year</span></li>
+                  <li class="pending"><span>59.</span><span>Attend a live music concert</span></li>
+                  <li class="pending"><span>60.</span><span>Learn self defense</span></li>
+                  <li class="pending"><span>61.</span><span>Watch 100 Hindi movies</span></li>
+                  <li class="pending"><span>62.</span><span>Watch a full boring football game</span></li>
+                  <li class="pending"><span>63.</span><span>Make delicious food to feed myself each day</span></li>
+                  <li class="pending"><span>64.</span><span>Work in a restaurant.. McDonalds?</span></li>
+                  <li class="pending"><span>65.</span><span>Sell food in the street</span></li>
+                  <li class="pending"><span>66.</span><span>Travel first class</span></li>
+                  <li class="pending"><span>67.</span><span>Marry the love of my life</span></li>
+                  <li class="pending"><span>68.</span><span>Start a startup idea that sounds like a stupid idea.. But turns to be a successful business</span></li>
+                  <li class="pending"><span>69.</span><span>Solve a Rubik’s cube</span></li>
+                  <li class="pending"><span>70.</span><span>Learn how to ride a horse</span></li>
+                  <li class="pending"><span>71.</span><span>Learn how to shoot with an arc</span></li>
+                  <li class="pending"><span>72.</span><span>Have a couple of arc shots while riding a horse</span></li>
+                  <li class="pending"><span>73.</span><span>Touch a dolphin</span></li>
+                  <li class="pending"><span>74.</span><span>Build something using the Lego blocks</span></li>
+                  <li class="pending"><span>75.</span><span>Wear a bear costume and hug random people from the street</span></li>
+                  <li class="pending"><span>76.</span><span>Practice Kung Fu or Aikido</span></li>
+            </ul>
+            <div class="links"><a class="link router" href="#" title="Back to home">Back to home</a></div>
+          </main>
+        </div>
+        <div class="template color-red" data-template="projectsAll">
+          <main>
+            <div class="h1"><span></span><span>
+                <mark>latest projects</mark></span></div>
+            <div class="small"><span>These are some projects I'm proud of creating,</span><span>contributing, or being part of.</span></div>
+            <ul class="list blocks">
+                  <li class="listItem"><a href="https://github.com/zhmbo/remove-repos" title="remove-repos - 批量删除 Github 仓库工具" target="_blank"><span>Sep 07, 2020.</span><span>remove-repos - 批量删除 Github 仓库工具</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/zhmbo" title="Github - Profile" target="_blank"><span>Sep 07, 2020.</span><span>Github - Profile</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/blogs" title="Blogs - 博客笔记" target="_blank"><span>Sep 23, 2020.</span><span>Blogs - 博客笔记</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/ZBCodeMixer" title="ZBCodeMixer - iOS混淆工具" target="_blank"><span>Aug 20, 2019.</span><span>ZBCodeMixer - iOS混淆工具</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/zhmbo-website-old" title="zhmbo-website-old - 2017Blogs" target="_blank"><span>Nov 09, 2017.</span><span>zhmbo-website-old - 2017Blogs</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/ZBCellConfig" title="ZBCellConfig - UITableViewCell++" target="_blank"><span>Mar 07, 2017.</span><span>ZBCellConfig - UITableViewCell++</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/CCAlert" title="CCAlert - Cocos 弹窗插件" target="_blank"><span>Aug 04, 2017.</span><span>CCAlert - Cocos 弹窗插件</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/ZBLiveBarrage" title="ZBLiveBarrage - 直播弹幕" target="_blank"><span>Mar 15, 2017.</span><span>ZBLiveBarrage - 直播弹幕</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/alarm-cocoscreator" title="Alarm-CocosCreator - 使用 Cocos 实现闹铃框架" target="_blank"><span>Jun 24, 2017.</span><span>Alarm-CocosCreator - 使用 Cocos 实现闹铃框架</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/CodeSnippets" title="Objectiv-C CodeSinppets - 代码块" target="_blank"><span>Jul 30, 2017.</span><span>Objectiv-C CodeSinppets - 代码块</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/SIMPLE_ALARM" title="SIMPLE_ALARM - 仿系统闹铃" target="_blank"><span>Aug 07, 2016.</span><span>SIMPLE_ALARM - 仿系统闹铃</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+                  <li class="listItem"><a href="https://github.com/zhmbo/OwniOS" title="OwniOS - 早年整理凌乱的知识点" target="_blank"><span>Oct 18, 2016.</span><span>OwniOS - 早年整理凌乱的知识点</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+                      </svg></a></li>
+            </ul>
+            <div class="links"><a class="link router" href="#" title="Back to home">Back to home</a></div>
+          </main>
+        </div>
+        <div class="template color-blue" data-template="blog">
+          <main>
+            <div class="h1"><span>Get ready to </span><span> visit my  
+                <mark>tech blog site</mark>..</span></div>
+            <div class="p"><span>We’ll be getting into blog within 
+                <time>5</time> seconds.</span></div>
+            <div class="links"><a class="link router" href="#" title="Back to home now" data-callback="blogCallback">Back to home now</a></div>
+          </main>
+        </div>
+        <div class="template color-red" data-template="aboutme">
+          <main>
+            <div class="h1 span">About 
+              <mark>zhmbo</mark>
+            </div>
+            <div class="h2 span">
+              <mark>简介</mark>
+            </div>
+            <div class="p">我是一个来自中国的软件开发者，热衷于钻研互联网前沿科技</div>
+            <div class="p">并且任职于一家互联网公司的
+              <mark>iOS开发工程师</mark>
+            </div>
+            <div class="h2 span">
+              <mark>Find Me</mark>
+            </div>
+            <div class="p">E-mail：<a class="link color-yellow" href="mailto:hi@zhmbo.cn" title="mail">hi@zhmbo.cn</a></div>
+            <div class="p">Github: <a class="link color-blue" href="https://github.com/zhmbo" title="Github">github.com/zhmbo</a></div>
+            <div class="p">技术博客: <a class="link router color-green" href="#blog" title="blog">zhmbo.cn/blog</a></div>
+            <div class="links"><a class="link router" href="#secret" title="Tell me a secret">Tell me a secret</a><a class="link router" href="#" title="Back to home">Back to home</a></div>
+          </main>
+        </div>
+        <div class="template color-grayscale" data-template="notFound">
+          <main>
+            <div class="h1"><span>The page you’re</span><span>looking for 
+                <mark>doesn’t exist</mark>..</span></div>
+            <div class="p"><span>We’ll be getting back home within 
+                <time>5</time> seconds.</span></div>
+            <div class="links"><a class="link router" href="#" title="Back to home now" data-callback="notFoundCallback">Back to home now</a></div>
+          </main>
+        </div>
+        <div class="loading" id="identity" title="Menu">
+          <div><a class="router" href="#secret" title="Tell secret"><span>tell secret</span></a></div>
+          <div><a class="router" href="#aboutme" title="About me"><span>About me</span></a></div>
+          <div><a class="router" href="#projects" title="Latest projects"><span>latest projects</span></a></div>
+          <div><a class="router" href="#blog" title="View my technology blog"><span>View my technology blog</span></a></div>
+        </div><a class="loading router" id="signature" href="#" title="Go to home"></a><a class="loading" id="burger" href="#" title="Menu">
+          <div></div>
+          <div></div>
+          <div></div></a>
+      </div>
+    </div><img src="includes/images/identity.png" style="display: none" title="zhmbo identity" alt="zhmbo identity">
+  </body>
+</html>
